@@ -1,0 +1,21 @@
+body{
+  background-color: black;
+}
+
+.card{
+  background-color:black;
+  color: darkgoldenrod;
+  width: 450px;
+}
+
+.btn-primary{
+  margin-left: 121px;
+  margin-top: 1px;
+  width: 10px;
+  height: 45px;   
+  background: transparent;
+  border: none;
+  color: white;   
+  font-size:14px;
+  font-weight:700;
+}

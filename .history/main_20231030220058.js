@@ -39,6 +39,10 @@ const students =[
 const app = document.querySelector("#app");
 const btn = document.querySelector("#btn");
 
+const randomhouse = []
+{"Hufflepuff","Ravenclaw","Slytherin","Gryffindor"}
+   
+
 const renderToDom = (Students) =>{
 
   let domString = "";
@@ -55,7 +59,6 @@ const renderToDom = (Students) =>{
       <li class="list-group-item">Eye Color: ${student.eyeColor}
       <li class="list-group-item"> Favorite Food: ${student.favoriteFood}
       <li class="list-group-item"> House: ${student.house}
-      <button type="button" class="btn-warning">Expel</button>
     </ul>
   </div>`
   }
@@ -71,22 +74,7 @@ btn.addEventListener("click", () => {
   if(form.style.display === "none"){
     form.style.display = "block";
   }else{
-    form.style.display = "none";
-  }
-});
-
-const houses = ["Hufflepuff","Ravenclaw","Slytherin","Gryffindor"]
-
-const houseRandomizer = (min, max) => {
-  return Math.floor(Math.random() * 3);
-}
-
-app.addEventListener('click', (event) => {
-  if (event.target.id.includes("expel")) {
-    const [ , id] = event.target.id.split("--");
-    const index = students.findIndex(event => event.id === Number(id));
-    students.splice(index, 1);
-    renderToDom(expelled);
+    form.style.display = "";
   }
 });
 
@@ -94,17 +82,13 @@ const form = document.querySelector("form");
 
 const createStudent = (event) => {
   event.preventDefault();
-  const randomHouse = houseRandomizer(0,3);
-  const houseAssigned = houses[randomHouse]
-  const newStudent
-   = {
+  const newStudent = {
     id: students.length +1,
     firstName: document.querySelector("#firstName").value,
     lastName: document.querySelector("#lastName").value,
     hairColor: document.querySelector("#hairColor").value,
     eyeColor: document.querySelector("#eyeColor").value,
     favoriteFood: document.querySelector("#favoriteFood").value,
-    house: houseAssigned
   }
   students.push(newStudent);
   renderToDom(students);

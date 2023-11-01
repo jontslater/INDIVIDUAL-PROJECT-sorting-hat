@@ -81,15 +81,6 @@ const houseRandomizer = (min, max) => {
   return Math.floor(Math.random() * 3);
 }
 
-app.addEventListener('click', (event) => {
-  if (event.target.id.includes("expel")) {
-    const [ , id] = event.target.id.split("--");
-    const index = students.findIndex(event => event.id === Number(id));
-    students.splice(index, 1);
-    renderToDom(expelled);
-  }
-});
-
 const form = document.querySelector("form");
 
 const createStudent = (event) => {

@@ -55,7 +55,6 @@ const renderToDom = (Students) =>{
       <li class="list-group-item">Eye Color: ${student.eyeColor}
       <li class="list-group-item"> Favorite Food: ${student.favoriteFood}
       <li class="list-group-item"> House: ${student.house}
-      <button type="button" class="btn-warning">Expel</button>
     </ul>
   </div>`
   }
@@ -81,15 +80,6 @@ const houseRandomizer = (min, max) => {
   return Math.floor(Math.random() * 3);
 }
 
-app.addEventListener('click', (event) => {
-  if (event.target.id.includes("expel")) {
-    const [ , id] = event.target.id.split("--");
-    const index = students.findIndex(event => event.id === Number(id));
-    students.splice(index, 1);
-    renderToDom(expelled);
-  }
-});
-
 const form = document.querySelector("form");
 
 const createStudent = (event) => {
@@ -105,6 +95,7 @@ const createStudent = (event) => {
     eyeColor: document.querySelector("#eyeColor").value,
     favoriteFood: document.querySelector("#favoriteFood").value,
     house: houseAssigned
+  
   }
   students.push(newStudent);
   renderToDom(students);

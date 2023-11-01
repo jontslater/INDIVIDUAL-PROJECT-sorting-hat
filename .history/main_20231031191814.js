@@ -36,6 +36,18 @@ const students =[
     house: "Gryffindor",
   }
 ]
+
+const expelled = [
+  {
+    id: 1,
+    firstName,
+    lastName,
+    hairColor,
+    eyeColor, 
+    favoriteFood,
+    house,
+  },
+]
 const app = document.querySelector("#app");
 const btn = document.querySelector("#btn");
 
