@@ -83,7 +83,7 @@ const twoRenderToDom = (students) =>{
       <li class="list-group-item">Hair Color: ${student.hairColor}
       <li class="list-group-item">Eye Color: ${student.eyeColor}
       <li class="list-group-item"> Favorite Food: ${student.favoriteFood}
-      <li class="list-group-item"> Expelled
+      <li class="list-group-item"> House: ${student.house}
     </ul>
   </div>`
   }
@@ -92,6 +92,7 @@ const twoRenderToDom = (students) =>{
 }
 
 renderToDom(students)
+twoRenderToDom(expelledKids)
 
 btn.addEventListener("click", () => {
   const form = document.querySelector("form");
@@ -113,9 +114,11 @@ app.addEventListener('click', (event) => {
   if (event.target.id.includes("expel")) {
     const [ , id] = event.target.id.split("--");
     const index = students.findIndex(event => event.id === Number(id));
-    expelledKids.push(students[index])
     students.splice(index, 1);
-    renderToDom(students);
+    console.log(id)
+    expelledKids.push(students[index])
+    console.log(students)
+    // renderToDom(students);
     twoRenderToDom(expelledKids);
   }
 });

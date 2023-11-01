@@ -115,6 +115,8 @@ app.addEventListener('click', (event) => {
     const index = students.findIndex(event => event.id === Number(id));
     expelledKids.push(students[index])
     students.splice(index, 1);
+    console.log(id)
+    console.log(students)
     renderToDom(students);
     twoRenderToDom(expelledKids);
   }
