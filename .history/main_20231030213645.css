@@ -1,0 +1,9 @@
+body{
+  background-color: black;
+}
+
+.card{
+  background-color:black;
+  color: darkgoldenrod;
+  width: 400px;
+}

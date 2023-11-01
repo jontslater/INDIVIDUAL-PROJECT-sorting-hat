@@ -1,0 +1,45 @@
+body{
+  background-color: black;
+}
+
+.card{
+  background-color:black;
+  color: darkgoldenrod;
+  width: 450px;
+}
+
+.btn{
+  margin-left: 121px;
+  margin-top: 3px;
+  margin-bottom: 3px;
+  right: 120px;
+  width: 187px;
+  height: 65px;   
+  border: none;
+  color: white;   
+  font-size:14px;
+  font-weight:700;
+  background-color:darkgoldenrod;
+  position: relative;
+  font-family: monospace;
+}
+
+.names{
+  display: none;
+}
+
+.btn-warning{
+  margin-left: 121px;
+  margin-top: 3px;
+  margin-bottom: 3px;
+  right: 75px;
+  width: 187px;
+  height: 65px;   
+  border: none;
+  color: white;   
+  font-size:14px;
+  font-weight:700;
+  background-color:darkgoldenrod;
+  position: relative;
+  font-family: monospace;
+}
