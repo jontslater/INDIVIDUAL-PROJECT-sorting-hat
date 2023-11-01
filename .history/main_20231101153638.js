@@ -55,7 +55,7 @@ const renderToDom = (students) =>{
       <li class="list-group-item">Eye Color: ${student.eyeColor}
       <li class="list-group-item"> Favorite Food: ${student.favoriteFood}
       <li class="list-group-item"> House: ${student.house}
-      <button type="button" id="expel--${student.id}" class="btn-warning">Expel</button>
+      <button type="button" id="--${student.id}" class="btn-warning">Expel</button>
     </ul>
   </div>`
   }

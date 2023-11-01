@@ -39,7 +39,7 @@ const students =[
 const app = document.querySelector("#app");
 const btn = document.querySelector("#btn");
 
-const renderToDom = (students) =>{
+const renderToDom = (Students) =>{
 
   let domString = "";
 
@@ -55,7 +55,7 @@ const renderToDom = (students) =>{
       <li class="list-group-item">Eye Color: ${student.eyeColor}
       <li class="list-group-item"> Favorite Food: ${student.favoriteFood}
       <li class="list-group-item"> House: ${student.house}
-      <button type="button" id="expel--${student.id}" class="btn-warning">Expel</button>
+      <button type="button" id="--${student.id}" class="btn-warning">Expel</button>
     </ul>
   </div>`
   }
@@ -86,7 +86,7 @@ app.addEventListener('click', (event) => {
     const [ , id] = event.target.id.split("--");
     const index = students.findIndex(event => event.id === Number(id));
     students.splice(index, 1);
-    renderToDom(students);
+    renderToDom(expelled);
   }
 });
 
