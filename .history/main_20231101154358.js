@@ -38,11 +38,8 @@ const students =[
 ];
 
 
-const expelledKids =[]
-
 const app = document.querySelector("#app");
 const btn = document.querySelector("#btn");
-
 const houses = ["Hufflepuff","Ravenclaw","Slytherin","Gryffindor"]
 
 
@@ -51,6 +48,7 @@ const renderToDom = (students) =>{
   let domString = "";
 
   for(let student of students){
+
     domString += `<div class="card" style="width: 18rem;">
     <div class="card-header">
     </div>
@@ -67,28 +65,6 @@ const renderToDom = (students) =>{
   }
   const app = document.querySelector("#app")
   app.innerHTML = domString
-}
-
-const twoRenderToDom = (students) =>{
-
-  let domString = "";
-
-  for(let student of students){
-    domString += `<div class="card" style="width: 18rem;">
-    <div class="card-header">
-    </div>
-    <ul class="list-group list-group-flush">
-       
-      <li class="list-group-item">Name: ${student.firstName} ${student.lastName}
-      <li class="list-group-item">Hair Color: ${student.hairColor}
-      <li class="list-group-item">Eye Color: ${student.eyeColor}
-      <li class="list-group-item"> Favorite Food: ${student.favoriteFood}
-      <li class="list-group-item"> Expelled
-    </ul>
-  </div>`
-  }
-  const expelApp = document.getElementById("expelApp") 
-  expelApp.innerHTML = domString
 }
 
 renderToDom(students)
@@ -113,14 +89,10 @@ app.addEventListener('click', (event) => {
   if (event.target.id.includes("expel")) {
     const [ , id] = event.target.id.split("--");
     const index = students.findIndex(event => event.id === Number(id));
-    expelledKids.push(students[index])
     students.splice(index, 1);
     renderToDom(students);
-    twoRenderToDom(expelledKids);
   }
 });
-
-
 
 const form = document.querySelector("form");
 
