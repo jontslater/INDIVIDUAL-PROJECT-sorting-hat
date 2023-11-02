@@ -126,18 +126,19 @@ document.querySelector("#hufflepuff").addEventListener("click", () => {houseFilt
 });
 
 
-const houseFilter = (house) => {
-    const newArray = students.filter(item => item.house.toLowerCase() === house)
-    renderToDom(newArray);
+const houseFilter = (event) => {
+  if (event.target.id.includes ("hufflepuff")){
+    const hufflepuff = students.filter(item => item.house.toLowerCase() === "hufflepuff")
+    renderToDom(hufflepuff);
     twoRenderToDom(expelledKids);
   }
-  // }
-  // if(event.target.id.includes("ravenclaw")){
-  //   const ravenclaw = students.filter(item => item.house === "ravenclaw")
-  //   renderToDom(ravenclaw)
-  //   twoRenderToDom(expelledKids);
-  // }
-  
+  if(event.target.id.includes("ravenclaw")){
+    const ravenclaw = students.filter(item => item.house === "ravenclaw")
+    renderToDom(ravenclaw)
+    twoRenderToDom(expelledKids);
+  }
+
+  }
 
 
 const form = document.querySelector("form");

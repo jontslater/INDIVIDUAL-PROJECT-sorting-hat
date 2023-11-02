@@ -42,8 +42,7 @@ const expelledKids =[]
 
 const app = document.querySelector("#app");
 const btn = document.querySelector("#btn");
-
-
+console.log(btn)
 
 const houses = ["Hufflepuff","Ravenclaw","Slytherin","Gryffindor"]
 
@@ -122,22 +121,8 @@ app.addEventListener('click', (event) => {
   }
 });
 
-document.querySelector("#hufflepuff").addEventListener("click", () => {houseFilter("hufflepuff");
-});
 
 
-const houseFilter = (house) => {
-    const newArray = students.filter(item => item.house.toLowerCase() === house)
-    renderToDom(newArray);
-    twoRenderToDom(expelledKids);
-  }
-  // }
-  // if(event.target.id.includes("ravenclaw")){
-  //   const ravenclaw = students.filter(item => item.house === "ravenclaw")
-  //   renderToDom(ravenclaw)
-  //   twoRenderToDom(expelledKids);
-  // }
-  
 
 
 const form = document.querySelector("form");
