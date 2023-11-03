@@ -55,9 +55,10 @@ body{
   left: 400px
 }
 
-.housebutton{
-  float:left;
+#housebutton{
+left: 50px;
 }
+
 .card-text{
   color:white;
 }

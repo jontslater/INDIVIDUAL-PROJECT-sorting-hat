@@ -46,18 +46,7 @@ body{
 }
 
 .expelcard{
-  width:500px;
-  height: 600px;
-  margin:auto;
-  border: 3px solid black;
-  float: none;
-  display: inline-block;
-  left: 400px
-}
-
-.housebutton{
-  float:left;
-}
-.card-text{
-  color:white;
+  position: relative;
+  margin-left: 1300px;
+  top: 1000px;
 }
