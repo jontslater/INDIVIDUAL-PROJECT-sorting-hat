@@ -36,26 +36,12 @@ const students =[
     house: "Gryffindor",
   }
 ];
-
 const expelledKids =[]
-const houses = ["Hufflepuff","Ravenclaw","Slytherin","Gryffindor"]
-const form = document.querySelector("form");
+
 const app = document.querySelector("#app");
 const btn = document.querySelector("#btn");
 
-document.querySelector("#hufflepuff").addEventListener("click", () => {houseFilter("hufflepuff");
-});
-
-document.querySelector("#ravenclaw").addEventListener("click", () => {houseFilter("ravenclaw");
-});
-
-document.querySelector("#slytherin").addEventListener("click", () => {houseFilter("slytherin");
-});
-
-document.querySelector("#gryffindor").addEventListener("click", () => {houseFilter("gryffindor");
-});
-
-document.querySelector("#allhouses").addEventListener("click", () => {renderToDom(students)});
+const houses = ["Hufflepuff","Ravenclaw","Slytherin","Gryffindor"]
 
 
 const renderToDom = (students) =>{
@@ -86,7 +72,7 @@ const twoRenderToDom = (students) =>{
   let domString = "";
 
   for(let student of students){
-    domString += `<div class="expelcard" style="width: 18rem;">
+    domString += `<div class="card" style="width: 18rem;">
     <div class="card-header">
     </div>
     <ul class="list-group list-group-flush">
@@ -130,11 +116,18 @@ app.addEventListener('click', (event) => {
   }
 });
 
+document.querySelector("#hufflepuff").addEventListener("click", () => {houseFilter("hufflepuff");
+});
+
+
 const houseFilter = (house) => {
     const newArray = students.filter(item => item.house.toLowerCase() === house)
     renderToDom(newArray);
     twoRenderToDom(expelledKids);
   }
+  
+const form = document.querySelector("form");
+
 const createStudent = (event) => {
   event.preventDefault();
   const randomHouse = houseRandomizer(0,3);

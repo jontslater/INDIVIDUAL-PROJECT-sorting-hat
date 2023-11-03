@@ -45,19 +45,10 @@ body{
   font-family: monospace;
 }
 
-.expelcard{
-  width:500px;
-  height: 600px;
-  margin:auto;
-  border: 3px solid black;
-  float: none;
-  display: inline-block;
-  left: 400px
-}
-
-.housebutton{
-  float:left;
-}
-.card-text{
-  color:white;
+.container2{
+  padding: 60px;
+  text-align: center;
+  background: #1abc9c;
+  color: white;
+  font-size: 30px;
 }

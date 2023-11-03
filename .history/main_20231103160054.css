@@ -56,8 +56,9 @@ body{
 }
 
 .housebutton{
-  float:left;
+margin-right: auto;
 }
+
 .card-text{
   color:white;
 }

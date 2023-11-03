@@ -43,6 +43,8 @@ const form = document.querySelector("form");
 const app = document.querySelector("#app");
 const btn = document.querySelector("#btn");
 
+form.addEventListener("submit", createStudent)
+
 document.querySelector("#hufflepuff").addEventListener("click", () => {houseFilter("hufflepuff");
 });
 
@@ -86,7 +88,7 @@ const twoRenderToDom = (students) =>{
   let domString = "";
 
   for(let student of students){
-    domString += `<div class="expelcard" style="width: 18rem;">
+    domString += `<div class="card" style="width: 18rem;">
     <div class="card-header">
     </div>
     <ul class="list-group list-group-flush">
@@ -153,4 +155,3 @@ const createStudent = (event) => {
   renderToDom(students);
   form.reset();
 }
-form.addEventListener("submit", createStudent)

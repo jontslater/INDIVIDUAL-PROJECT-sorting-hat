@@ -55,9 +55,13 @@ body{
   left: 400px
 }
 
-.housebutton{
-  float:left;
+.buttoncontainer{
+left: 100px;
+width: 150px;
+margin-right: 100px;
+max-width: fit-content;
 }
+
 .card-text{
   color:white;
 }

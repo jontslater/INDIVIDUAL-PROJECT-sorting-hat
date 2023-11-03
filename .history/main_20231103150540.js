@@ -86,7 +86,7 @@ const twoRenderToDom = (students) =>{
   let domString = "";
 
   for(let student of students){
-    domString += `<div class="expelcard" style="width: 18rem;">
+    domString += `<div class="card" style="width: 18rem;">
     <div class="card-header">
     </div>
     <ul class="list-group list-group-flush">
